@@ -1,0 +1,19 @@
+<h2>Add Password Details</h2>
+
+<%= form_for @password do |f| %>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    
+    <p>
+      <%= f.label :user_name %><br />
+      <%= f.text_field :user_name %>
+    </p>
+    
+    <p>
+      <%= f.label :password %><br />
+      <%= f.text_field :password %>
+    </p>
+
+<% end %>
