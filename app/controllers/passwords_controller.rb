@@ -13,6 +13,8 @@ class PasswordsController < ApplicationController
     end
   end
   
+  
+  
   private
   
   def password_params

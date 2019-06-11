@@ -1,0 +1,8 @@
+<% if @password.errors.any? %>
+  <h3>The Following Errors Prevented the password detail from being saved</h3>
+  <ul>
+      <% @password.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+  </ul>
+<% end %>
