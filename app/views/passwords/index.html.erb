@@ -1,0 +1,11 @@
+<div class="center well">
+    <h2 align="center">All Password Details</h2>
+</div>
+
+<div align="center">
+    <% @passwords.each do |pass| %>
+        
+        <p>Name: <%= pass.name %> UserName: <%= pass.user_name %>  Password: <%= pass.password %></p>
+    
+    <% end %>
+</div>

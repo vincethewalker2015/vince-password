@@ -1,0 +1,17 @@
+<div class ="center well">
+    <h2 align="center">Show</h2>
+</div>
+
+<p>
+    Name: <%= @password.name %>
+</p>
+
+<p>
+    Name: <%= @password.user_name %>
+</p>
+
+<p>
+    Name: <%= @password.password %>
+</p>
+
+<%= link_to "Edit Password Details", edit_password_path(@password) %> <%= link_to "All Password Details", passwords_path %>

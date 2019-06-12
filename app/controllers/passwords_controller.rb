@@ -1,16 +1,29 @@
 class PasswordsController < ApplicationController
+  
+  def index
+    @passwords = Password.all
+  end
     
   def new
-    @password =Password.new
+    @password = Password.new
   end
   
   def create
     @password = Password.new(password_params)
     if @password.save
-    redirect_to password_path(@password)
+      flash[:success] = "Password Details Saved"
+      redirect_to password_path(@password)
     else
-    render 'new'
+      render 'new'
     end
+  end
+  
+  def show
+    @password = Password.find(params[:id])
+  end
+  
+  def edit
+    @password = Password.find(params[:id])
   end
   
   
