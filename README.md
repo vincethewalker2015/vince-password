@@ -1,4 +1,4 @@
 # Password App.
 
-Finished up Chapter 4
+Finished up Chapter 6 (Flash not working properly)
 
