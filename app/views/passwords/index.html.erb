@@ -4,18 +4,19 @@
 
 <div align="center">
     <div class="col-md-8 col-md-offset-2">
-        <div class="well">
-            <% @passwords.each do |pass| %>
-            
-            <p>Name: <%= pass.name %> 
-            UserName: <%= pass.user_name %>  
-            Password: <%= pass.password %>
-            <%= link_to "Edit", edit_password_path(pass) %>
-            <%= link_to "View", password_path(pass) %> 
-            <%= link_to "Delete", password_path(pass), method: :delete, data: {confirm: "Are you sure?" } %>    
-            </p>
         
+            <% @passwords.each do |pass| %>
+        <div class="well profile-black-white-thin row <%= cycle('profile-black-white-thin-b', '') %> >
+            <p><span class="bold">Name: </span> <span class="green bold"><%= pass.name %> </span>
+            <span class="bold"> UserName: </span> <span class="green"><%= pass.user_name %> </span>  
+            <span class="bold"> Password: </span> <span class="italics"><%= pass.password %> </span>
+            <span class="spacer">Bubble</span>
+            <%= link_to "Edit", edit_password_path(pass), class: "btn btn-primary" %>
+            <%= link_to "View", password_path(pass), class: "btn btn-warning" %> 
+            <%= link_to "Delete", password_path(pass), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-danger" %>    
+            </p>
+         </div>
             <% end %>
-        </div>
+       
     </div>
 </div>

@@ -3,20 +3,24 @@
 </div>
 
 <div class="container">
-    <div class="row" align="center">
+  <div class="row" align="center">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
         <p>
-            Name: <%= @password.name %>
+          <span class="bold">Name:  </span><span class="green bold"><%= @password.name %></span>
         </p>
 
         <p>
-            Name: <%= @password.user_name %>
+          <span class="bold">User Name:  </span><span class="green"><%= @password.user_name %></span>
         </p>
 
         <p>
-            Name: <%= @password.password %>
+          <span class="bold">Password:  </span><span class="italics"><%= @password.password %></span>
         </p>
 
-        <%= link_to "Edit Password Details", edit_password_path(@password) %>
-        <%= link_to "Back to Index", passwords_path %> 
+        <%= link_to "Edit Password Details", edit_password_path(@password), class: "btn btn-warning" %>
+        <%= link_to "Back to Index", passwords_path, class: "btn btn-success" %> 
+      </div>
     </div>
+  </div>
 </div>
