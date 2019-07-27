@@ -1,23 +1,27 @@
-<h2>Create Password Details</h2>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well">
+      <%= form_for @password do |f| %>
+        <p>
+          <%= f.label :name %><br />
+          <%= f.text_field :name %>
+        </p>
+        
+        <p>
+          <%= f.label :user_name %><br />
+          <%= f.text_field :user_name %>
+        </p>
+        
+        <p>
+          <%= f.label :password %><br />
+          <%= f.text_field :password %>
+        </p>
+        
+        <p>
+          <%= f.submit class: "btn btn-primary" %>
+        </p>
 
-<%= form_for @password do |f| %>
-    <p>
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </p>
-    
-    <p>
-      <%= f.label :user_name %><br />
-      <%= f.text_field :user_name %>
-    </p>
-    
-    <p>
-      <%= f.label :password %><br />
-      <%= f.text_field :password %>
-    </p>
-    
-    <p>
-      <%= f.submit %>
-    </p>
-
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,16 @@ class PasswordsController < ApplicationController
   def edit
     @password = Password.find(params[:id])
   end
+
+  def update
+    @password = Password.find(params[:id])
+    if @password.update(password_params)
+      flash[:notice] = "Password details updated"
+      redirect_to password_path(@password)
+    else
+      render 'edit'
+    end
+  end
   
   
   

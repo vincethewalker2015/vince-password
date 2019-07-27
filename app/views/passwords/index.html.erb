@@ -3,15 +3,19 @@
 </div>
 
 <div align="center">
-    <% @passwords.each do |pass| %>
+    <div class="col-md-8 col-md-offset-2">
+        <div class="well">
+            <% @passwords.each do |pass| %>
+            
+            <p>Name: <%= pass.name %> 
+            UserName: <%= pass.user_name %>  
+            Password: <%= pass.password %>
+            <%= link_to "Edit", edit_password_path(pass) %>
+            <%= link_to "View", password_path(pass) %> 
+            <%= link_to "Delete", password_path(pass), method: :delete, data: {confirm: "Are you sure?" } %>    
+            </p>
         
-        <p>Name: <%= pass.name %> 
-           UserName: <%= pass.user_name %>  
-           Password: <%= pass.password %>
-        <%= link_to "Edit", edit_password_path(pass) %>
-        <%= link_to "View", password_path(pass) %> 
-        <%= link_to "Delete", password_path(pass), method: :delete, data: {confirm: "Are you sure?" } %>    
-        </p>
-    
-    <% end %>
+            <% end %>
+        </div>
+    </div>
 </div>
