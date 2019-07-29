@@ -18,6 +18,10 @@
           <span class="bold">Password:  </span><span class="italics"><%= @password.password %></span>
         </p>
 
+        <p>
+          <span class="bold">General Notes:  </span><span class="bold"><%= @password.notes %></span>
+        </p>
+
         <%= link_to "Edit Password Details", edit_password_path(@password), class: "btn btn-warning" %>
         <%= link_to "Back to Index", passwords_path, class: "btn btn-success" %> 
       </div>
