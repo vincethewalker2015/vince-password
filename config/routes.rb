@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'pages#home'
+  
+  devise_for :users
+  root to: 'passwords#index'
   
   resources :passwords
 end

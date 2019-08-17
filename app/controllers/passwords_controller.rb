@@ -43,5 +43,12 @@ class PasswordsController < ApplicationController
   def password_params
     params.require(:password).permit(:name, :user_name, :password)
   end
+
+  def require_same_user
+    if current_user != @password.user and !current_user.admin?
+      flash[:danger] = "You cannot Edit or delete this Password"
+      redirect_to passwords_path
+    end
+  end
     
 end
