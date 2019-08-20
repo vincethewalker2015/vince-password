@@ -22,7 +22,9 @@
           <span class="bold">General Notes:  </span><span class="bold"><%= @password.notes %></span>
         </p>
 
-        <%= link_to "Edit Password Details", edit_password_path(@password), class: "btn btn-warning" %>
+        <% if current_user && current_user.admin? %>
+          <%= link_to "Edit Password Details", edit_password_path(@password), class: "btn btn-warning" %>
+        <% end %>
         <%= link_to "Back to Index", passwords_path, class: "btn btn-success" %> 
       </div>
     </div>

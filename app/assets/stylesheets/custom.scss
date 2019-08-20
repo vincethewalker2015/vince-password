@@ -18,6 +18,9 @@ body {
   .green {
       color: #006400;
   }
+  .white {
+      color: #fff !important;
+  }
 
   /* The Wells */
 
@@ -59,12 +62,36 @@ body {
 
         //Flash Warnings
         .warning {
-            background-color:#f8d7da;
-            color:#721c24;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color:#31708f;;
             border-radius: 5px;
             padding: 5px;
             h3 {
                 margin-left: 20px;
             }
+        }
+        //Devise Flash Warning
+        .alert, .alert-alert {
+            background-color:#fff3cd;
+            color:#856404;
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        //NAV Bar
+            //Buttons
+        .nav-but-blue {
+            border: 2px solid #fff;
+            color: #fff !important;
+            z-index: 100;
+        }
+        
+        .nav-but-red {
+            border: 2px solid #fff;
+            color: #fff !important;
+            z-index: 100;
         }
         
