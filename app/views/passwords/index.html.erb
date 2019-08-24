@@ -1,9 +1,10 @@
 <div class="center well">
     <h2 align="center">All Password Details</h2>
+    <h3 align="center">User <%= current_user.name %> <%= " 'Admin User'" if current_user.admin?%>
 </div>
 
 <div align="center">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-10 col-md-offset-1">
       <% @passwords.each do |pass| %>
         <div class="well profile-black-white-thin row" <%= cycle("profile-black-white-thin-b", '') %> 
             <p>
