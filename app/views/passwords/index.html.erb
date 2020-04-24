@@ -10,9 +10,6 @@
 
               <p></p>    
 							<p class="bold"> Name:  <span class="green"><%= pass.name %> </span></p>
-							<p class="bold"> User Name:  <span class="green"><%= pass.user_name %> </p>
-							<p class="bold"> Password:  <span class="italics"><%= pass.password %> </p>
-							<p class="spacer">Bubble</p>
               
 							<%= link_to "View", password_path(pass), class: "btn btn-warning" %> 
 							<% if current_user && current_user.admin? %>

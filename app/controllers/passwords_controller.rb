@@ -35,6 +35,13 @@ class PasswordsController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @password = Password.find(params[:id])
+    @password.destroy
+    flash[:danger] = "Password Deleted"
+    redirect_to passwords_path
+  end
   
   
   

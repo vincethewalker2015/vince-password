@@ -1,13 +1,9 @@
 <div class="container">
-    <div class="center jumbotron">
-        <h1 align="center">Password App</h1>
+    <div class="well">
+        <h1 class="text-center">Password App</h1>
     </div>
-    <% if current_user && current_user.admin?%>
-        <div align="center">
-            <div class="home-buttons">
-                <p><%= link_to "Create User", new_user_registration_path, class: "btn btn-success btn-lg" %></p>
-            </div>
-        </div>
+    <% if current_user %>
+        <p class="text-center"><%= link_to "Change Your Password", edit_user_registration_path, class: "btn btn-warning btn-lg" %></p>
     <% end %>
 
 </div>
