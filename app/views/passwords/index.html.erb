@@ -1,23 +1,25 @@
 <div class="center well">
-    <h2 align="center">All Password Details</h2>
-    <h3 align="center">User <%= current_user.name %> <%= " 'Admin User'" if current_user.admin?%>
+    <h2 class="text-center">All Password Details</h2>
+    <h3 class="text-center">User <%= current_user.name %> <%= " 'Admin User'" if current_user.admin?%></h3>
 </div>
 
-<div align="center">
-    <div class="col-md-10 col-md-offset-1">
+<div class="text-center">
+    <div class="col-md-8 col-md-offset-2">
       <% @passwords.each do |pass| %>
         <div class="well profile-black-white-thin row" <%= cycle("profile-black-white-thin-b", '') %> 
-            <p>
-							<span class="bold "> Name: </span> <span class="green"><%= pass.name %> </span>
-							<span class="bold"> UserName: </span> <span class="green"><%= pass.user_name %> </span>  
-							<span class="bold"> Password: </span> <span class="italics"><%= pass.password %> </span>
-							<span class="spacer">Bubble</span></p>
+
+              <p></p>    
+							<p class="bold"> Name:  <span class="green"><%= pass.name %> </span></p>
+							<p class="bold"> User Name:  <span class="green"><%= pass.user_name %> </p>
+							<p class="bold"> Password:  <span class="italics"><%= pass.password %> </p>
+							<p class="spacer">Bubble</p>
+              
 							<%= link_to "View", password_path(pass), class: "btn btn-warning" %> 
 							<% if current_user && current_user.admin? %>
 									<%= link_to "Edit", edit_password_path(pass), class: "btn btn-primary" %>
 									<%= link_to "Delete", password_path(pass), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-danger" %> 
 							<% end %>
-            </p>
+            
          </div>
       <% end %>
     </div>

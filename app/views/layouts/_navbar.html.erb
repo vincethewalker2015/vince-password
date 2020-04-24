@@ -12,12 +12,14 @@
                 
                 <% if current_user %>
                   <li><%= link_to "Password Index", passwords_path %></li>
+                  <li class="white"><%= link_to current_user.name if current_user %></li>
+                  <li><%= link_to "(Admin)" if current_user.admin? %></li>
                 <% end %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><%#= link_to "Help", help_path %></li>
-                <% if current_user.admin? %>
-                  <li><%= link_to "New User Profile", user_registration_path, class: "btn btn-warning nav-but" %></li>
+                <% if current_user && current_user.admin? %>
+                  <li><%= link_to "New User Profile", new_user_registration_path, class: "btn btn-warning nav-but" %></li>
                   <li><%= link_to "Add New Password", new_password_path, class: "btn btn-primary nav-but" %></li>
                 <% end %>
                 <% if current_user %>

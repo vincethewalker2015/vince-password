@@ -8,18 +8,23 @@ body {
   .italics { // password color and style in index
       color: blue;
       font-style: italic;
+      font-size: 18px;
+      font-weight: bold
   }
 
   .bold { //user-name and Name in Index
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 18px;
   }
   .italic {
       font-style: italic;
+      
   }
 
   .green {
       color: #006400;
+      font-size: 18px;
+      font-weight: bold
   }
   .white {
       color: #fff !important;
