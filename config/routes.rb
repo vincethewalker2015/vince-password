@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   
-  devise_for :users
-  root to: 'passwords#index'
-  
+  devise_for :users, :controllers => { :registrations => 'registrations'}
+  resources :users, only: [:show, :index]
   resources :passwords
 end

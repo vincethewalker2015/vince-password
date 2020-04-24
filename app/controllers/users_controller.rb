@@ -1,18 +1,22 @@
 class UsersController < ApplicationController
-
+  
+  
+  def index
+    @users = User.all
+  end
   def new
     @user = User.new
   end
 
   def create
-    @user= User.new(user_params)
-    if @user.save
-      flash[:success] = "Details Created"
-      redirect_to users_path(@user)
-    else
-      flash[:danger] = "Try Again.."
-      render 'new'
-    end
+    # @user= User.new(user_params)
+    # if @user.save
+    #   flash[:success] = "Details Created"
+    #   redirect_to users_path(@user)
+    # else
+    #   flash[:danger] = "Try Again.."
+    #   render 'new'
+    # end
   end
 
   def show
@@ -26,7 +30,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash.now[:success] "Updated"
+      # flash.now[:success] "Updated"
       redirect_to user_path(@user)
     else
       render 'edit'

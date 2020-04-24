@@ -1,5 +1,5 @@
 <div class ="center well">
-    <h2 class="text-center">Password Details for: <%= @password.name %></h2>
+    <h2 class="text-center">User Details for: <%= @user.name %></h2>
     <h3 class="text-center">User: <%= current_user.name %> <%= " 'Admin User'" if current_user.admin?%>
 </div>
 
@@ -7,13 +7,13 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="well">
-          <p><span class="bold">User Name:  </span><span class="green"><%= @password.user_name %></span></p>
-          <p><span class="bold">Password:  </span><span class="italics"><%= @password.password %></span></p>
-          <p><span class="italic"><%= @password.notes %></span></p>
-      
+          <p><span class="bold">User Name:  </span><span class="green"><%= @user.name %></span></p>
+          <p><span class="bold">Email:  </span><span class="italics"><%= @user.email %></span></p>
+          <p><span class="bold">Password: </span>"<span class="italic"><%= @user.password %></span></p>
+
         <div class="text-center">
           <% if current_user && current_user.admin? %>
-          <%= link_to "Edit User", edit_password_path(@password), class: "btn btn-warning" %><br /><br />
+          <%= link_to "Edit User Details", edit_user_registration_path(@password), class: "btn btn-warning" %>
           <% end %>
           <%= link_to "Back to Index", passwords_path, class: "btn btn-success" %> 
         </div>
