@@ -13,7 +13,7 @@
       
         <div class="text-center">
           <% if current_user && current_user.admin? %>
-          <%= link_to "Edit User", edit_password_path(@password), class: "btn btn-warning" %><br /><br />
+          <%= link_to "Edit Password Details", edit_password_path(@password), class: "btn btn-warning" %><br /><br />
           <% end %>
           <%= link_to "Back to Index", passwords_path, class: "btn btn-success" %> 
         </div>
