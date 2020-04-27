@@ -4,9 +4,8 @@
         <div class="well profile-black-white-thin row" <%= cycle("profile-black-white-thin-b", '') %> 
 
               <p></p>    
-							<p class="bold"> Name:  <span class="green"><%= user.name %><%= " (Admin)" if user.admin?%></span></p>
-							<p class="bold"> User Name:  <span class="green"><%= user.email %> </p>
-							<p class="bold"> Password:  <span class="italics"><%= user.password %> </p>
+							<p class="bold-white"> Name:  <span class="white"><%= user.name %><%= " (Admin)" if user.admin?%></span></p>
+							<p class="bold-white"> User Name:  <span class="white"><%= user.email %> </p>
 							<p class="spacer">Bubble</p>
               
 							<%= link_to "View", user_path(user), class: "btn btn-warning" %> 
