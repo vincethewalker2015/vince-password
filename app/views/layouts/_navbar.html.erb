@@ -19,9 +19,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><%#= link_to "Help", help_path %></li>
                 <% if current_user && current_user.admin? %>
-                  <li><%= link_to "User List", users_path, class: "btn btn-warning nav-but" %></li>
-                  <li><%= link_to "New User Profile", new_user_registration_path, class: "btn btn-success nav-but" %></li>
-                  <li><%= link_to "Add New Password", new_password_path, class: "btn btn-primary nav-but" %></li>
+                  <li><%= link_to "Users", users_path, class: "btn btn-warning nav-but" %></li>
+                  <li><%= link_to "New User", new_user_registration_path, class: "btn btn-success nav-but" %></li>
+                  <li><%= link_to "New Password", new_password_path, class: "btn btn-primary nav-but" %></li>
                 <% end %>
                 <% if current_user %>
                   <li><%= link_to "Log out", destroy_user_session_path, class: "btn btn-danger nav-but", method: :delete %></li>
