@@ -4,7 +4,7 @@
         <div class="well profile-black-white-thin row" <%= cycle("profile-black-white-thin-b", '') %> 
 
               <p></p>    
-							<p class="bold"> Name:  <span class="green"><%= user.name %> </span></p>
+							<p class="bold"> Name:  <span class="green"><%= user.name %><%= " (Admin)" if user.admin?%></span></p>
 							<p class="bold"> User Name:  <span class="green"><%= user.email %> </p>
 							<p class="bold"> Password:  <span class="italics"><%= user.password %> </p>
 							<p class="spacer">Bubble</p>
@@ -13,7 +13,7 @@
 							<% if current_user && current_user.admin? %>
 									<%= link_to "Edit", edit_user_registration_path(user), class: "btn btn-primary" %>
 							<% end %>
-              <% if current_user.admin? %>
+              <% if current_user.admin? && !user.admin? %>
                 <%= link_to "Delete", admin_destroy_user_path(user), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-danger" %> 
               <% end %>
             
