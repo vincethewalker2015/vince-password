@@ -4,38 +4,38 @@
     <%= form_for(@password, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
       <div class="control-label col-md-2">
-        <%= f.label :name %>
+        <%= f.label :name, class: "white" %>
       </div>
       <div class="col-md-8">
-        <%= f.text_field :name, class: 'form-control', placeholder: "Name of Password", autofocus: true %>
+        <%= f.text_field :name, class: 'form-control bg-black', placeholder: "Name of Password", autofocus: true %>
       </div>
       </div>
 
 
       <div class="form-group">
       <div class="control-label col-md-2">
-        <%= f.label :user_name %>
+        <%= f.label :user_name, class: "white" %>
       </div>
       <div class="col-md-8">
-        <%= f.text_field :user_name, class: 'form-control', placeholder: "Add User Name" %>
+        <%= f.text_field :user_name, class: 'form-control bg-black', placeholder: "Add User Name" %>
       </div>
       </div>
 
       <div class="form-group">
       <div class="control-label col-md-2">
-        <%= f.label :password %>
+        <%= f.label :password, class: "white" %>
       </div>
       <div class="col-md-8">
-        <%= f.text_field :password, class: 'form-control', placeholder: "Add Password" %>
+        <%= f.text_field :password, class: 'form-control bg-black', placeholder: "Add Password" %>
       </div>
       </div>
 
       <div class="form-group">
       <div class="control-label col-md-2">
-        <%= f.label :notes %>
+        <%= f.label :notes, class: "white" %>
       </div>
       <div class="col-md-8">
-        <%= f.text_area :notes, class: 'form-control', placeholder: "Add any notes here on what the password is for.." %>
+        <%= f.text_area :notes, class: 'form-control bg-black', placeholder: "Add any notes here on what the password is for.." %>
       </div>
       </div>
 
