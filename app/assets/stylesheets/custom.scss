@@ -140,8 +140,8 @@ body {
             margin-bottom: 1.5rem;
             border: 2px solid #fff !important;
             border-radius: 5px !important;
-            margin-bottom: 6px;
-            padding: 3px;
+            // margin-bottom: 6px;
+            padding: 5px;
           }
 
           .mt-1 {
@@ -152,8 +152,16 @@ body {
             margin-top: 2px;
           }
 
+          .mt-5 {
+            margin-top: 5px;
+          }
+
           .ml-5 {
             margin-left: 5px;
+          }
+
+          .pt-5 {
+            padding-top: 5px;
           }
 
           .password-blue {
