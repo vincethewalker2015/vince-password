@@ -70,7 +70,7 @@ class PasswordsController < ApplicationController
   private
   
   def password_params
-    params.require(:password).permit(:name, :user_name, :password, :notes)
+    params.require(:password).permit(:name, :user_name, :password, :groups, :notes)
   end
 
   def require_same_user

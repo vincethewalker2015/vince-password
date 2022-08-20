@@ -32,6 +32,15 @@
 
       <div class="form-group">
       <div class="control-label col-md-2">
+        <%= f.label :group, class: "white" %>
+      </div>
+      <div class="col-md-8">
+        <%= f.text_field :groups, class: 'form-control bg-green', placeholder: "Add Group if Applicable", autofocus: true %>
+      </div>
+      </div>
+
+      <div class="form-group">
+      <div class="control-label col-md-2">
         <%= f.label :notes, class: "white" %>
       </div>
       <div class="col-md-8">

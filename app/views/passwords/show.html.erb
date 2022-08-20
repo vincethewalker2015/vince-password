@@ -1,6 +1,9 @@
 <div class ="center well">
     <h2 class="text-center white">Password Details for: <%= @password.name %></h2>
     <h3 class="text-center white">User: <%= current_user.name %> <%= " 'Admin User'" if current_user.admin?%>
+    <% if @password.groups? %>
+      <h3 class="text-center white">Group: <%= @password.groups %></h3>
+    <% end %>
 </div>
 
 <div class="container">
