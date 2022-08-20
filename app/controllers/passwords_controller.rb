@@ -52,7 +52,7 @@ class PasswordsController < ApplicationController
     @password = Password.find(params[:id])
     if @password.update(password_params)
       flash[:success] = "Password details updated"
-      redirect_to passwords_path
+      redirect_to password_path(@password)
     else
       render 'edit'
     end
