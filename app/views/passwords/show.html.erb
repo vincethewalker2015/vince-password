@@ -9,7 +9,7 @@
       <div class="well">
           <p><span class="bold-white">User Name: </span><span class="light-blue"><%= @password.user_name %></span></p>
           <p><span class="bold-white">Password:  </span><span class="green"> <%= @password.password %></span></p>
-          <p><span class="white"><%= @password.notes %></span></p>
+          <p class="splits"><span class="bold-white">Notes: </span><span><%= format_linebreaks @password.notes %></span></p>
       
         <div class="text-center">
           <% if current_user && current_user.admin? %>

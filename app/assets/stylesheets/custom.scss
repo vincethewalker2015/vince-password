@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.splits, p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 body {
     padding-top: 70px; // ensures objects sit below the navbar
     background: #006400;
