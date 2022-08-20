@@ -8,22 +8,22 @@
         <%= devise_error_messages! %>
         <div class="field form-group">
           <%= f.label :name, class: "white" %><br />
-          <%= f.text_field :name, autofocus: true, class: 'form-control bg-black', placeholder: "Name of User" %>
+          <%= f.text_field :name, autofocus: true, class: 'form-control bg-green', placeholder: "Name of User" %>
         </div>
         <div class="field form-group">
           <%= f.label :email, class: "white" %><br />
-          <%= f.email_field :email, autofocus: true, class: 'form-control bg-black', placeholder: "User email" %>
+          <%= f.email_field :email, autofocus: true, class: 'form-control bg-green', placeholder: "User email" %>
         </div>
         <div class="field form-group">
           <%= f.label :password, class: "white" %>
           <% if @validatable %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control bg-black', placeholder: "Choose Password" %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control bg-green', placeholder: "Choose Password" %>
         </div>
         <div class="field form-group">
           <%= f.label :password_confirmation, class: "white" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control bg-black', placeholder: "Re enter Password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control bg-green', placeholder: "Re enter Password" %>
         </div>
         <div class="actions form-group">
           <%= f.submit "Sign up", class: 'btn btn-success' %>

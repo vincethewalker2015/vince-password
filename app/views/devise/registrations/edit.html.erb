@@ -7,12 +7,12 @@
         <%= devise_error_messages! %>
         <div class="field form-group">
           <%= f.label :name, class: "white" %><br />
-          <%= f.text_field :name, class: 'form-control bg-black', autofocus: true, autocomplete: "email" %>
+          <%= f.text_field :name, class: 'form-control bg-green', autofocus: true, autocomplete: "email" %>
         </div>
 
         <div class="field form-group">
           <%= f.label :email, class: "white" %><br />
-          <%= f.email_field :email, class: 'form-control bg-black', autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, class: 'form-control bg-green', autofocus: true, autocomplete: "email" %>
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,7 +21,7 @@
 
         <div class="field form-group">
           <%= f.label :password, class: "white" %> <i class="white">(leave blank if you don't want to change it)</i><br />
-          <%= f.password_field :password, class: 'form-control bg-black', autocomplete: "new-password" %>
+          <%= f.password_field :password, class: 'form-control bg-green', autocomplete: "new-password" %>
           <% if @minimum_password_length %>
             <br />
             <em class="white"><%= @minimum_password_length %> characters minimum</em>
@@ -30,12 +30,12 @@
 
         <div class="field form-group">
           <%= f.label :password_confirmation, class: "white" %><br />
-          <%= f.password_field :password_confirmation, class: 'form-control bg-black', autocomplete: "new-password" %>
+          <%= f.password_field :password_confirmation, class: 'form-control bg-green', autocomplete: "new-password" %>
         </div>
 
         <div class="field form-group">
           <%= f.label :current_password, class: "white" %> <i class="white">(we need your current password to confirm your changes)</i><br />
-          <%= f.password_field :current_password, class: 'form-control bg-black', autocomplete: "current-password" %>
+          <%= f.password_field :current_password, class: 'form-control bg-green', autocomplete: "current-password" %>
         </div>
 
         <div class="field form-group">
