@@ -1,12 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// Disp;lays spaced text in passwords/show page
 .splits, p {
   color: #fff;
   font-weight: bold;
   font-size: 16px;
 }
 
+// Allows the navbar 'Hamburger' to white
+// .button, .navbar-toggle, .a {
+//   color: #fff !important;
+// }
 body {
     padding-top: 70px; // ensures objects sit below the navbar
     background: #006400;
