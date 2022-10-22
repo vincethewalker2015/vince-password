@@ -48,4 +48,4 @@ test:
   database: vince-passwords
   pool: 5
   username: vince-passwords
-  password: <%= ENV['ONLINE-SHOP-RAILS5_DATABASE_PASSWORD'] %>
+  password: <%= ENV['VINCE-PASSWORDS_DATABASE_PASSWORD'] %>
